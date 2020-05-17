@@ -1,0 +1,107 @@
+2020-05-02 14:02:11,134: ERROR: Exception on / [GET] [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py : 1761]
+Traceback (most recent call last):
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/main/routes.py", line 21, in index
+    (keysL, positiveL, negativeL) = pipelineAnalytics()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py", line 64, in pipelineAnalytics
+    dataCrawler = crawler.pipeline()            #metodo pipeline genera un json con los tweets
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/crawler.py", line 116, in pipeline
+    mexico_locations = self.get_mexico_locations()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/crawler.py", line 25, in get_mexico_locations
+    locations = self.t.get_available_trends()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/endpoints.py", line 1082, in get_available_trends
+    return self.get('trends/available', params=params)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 270, in get
+    return self.request(endpoint, params=params, version=version)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 264, in request
+    api_call=url)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 199, in _request
+    retry_after=response.headers.get('X-Rate-Limit-Reset'))
+twython.exceptions.TwythonAuthError: Twitter API returned a 401 (Unauthorized), Could not authenticate you.
+2020-05-02 14:11:41,392: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-05-02 14:11:41,393: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-05-02 14:11:41,393: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-05-02 14:11:45,606: INFO: Ejecutando el crawler [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 62]
+2020-05-02 14:11:45,606: INFO: Ejecutando el crawler [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 62]
+2020-05-02 14:11:46,114: ERROR: Exception on / [GET] [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py : 1761]
+Traceback (most recent call last):
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/main/routes.py", line 21, in index
+    (keysL, positiveL, negativeL) = pipelineAnalytics()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py", line 64, in pipelineAnalytics
+    dataCrawler = crawler.pipeline()            #metodo pipeline genera un json con los tweets
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/crawler.py", line 121, in pipeline
+    mexico_locations = self.get_mexico_locations()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/crawler.py", line 30, in get_mexico_locations
+    locations = self.t.get_available_trends()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/endpoints.py", line 1082, in get_available_trends
+    return self.get('trends/available', params=params)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 270, in get
+    return self.request(endpoint, params=params, version=version)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 264, in request
+    api_call=url)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 199, in _request
+    retry_after=response.headers.get('X-Rate-Limit-Reset'))
+twython.exceptions.TwythonAuthError: Twitter API returned a 401 (Unauthorized), Could not authenticate you.
+2020-05-02 14:11:46,114: ERROR: Exception on / [GET] [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py : 1761]
+Traceback (most recent call last):
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/main/routes.py", line 21, in index
+    (keysL, positiveL, negativeL) = pipelineAnalytics()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py", line 64, in pipelineAnalytics
+    dataCrawler = crawler.pipeline()            #metodo pipeline genera un json con los tweets
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/crawler.py", line 121, in pipeline
+    mexico_locations = self.get_mexico_locations()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/crawler.py", line 30, in get_mexico_locations
+    locations = self.t.get_available_trends()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/endpoints.py", line 1082, in get_available_trends
+    return self.get('trends/available', params=params)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 270, in get
+    return self.request(endpoint, params=params, version=version)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 264, in request
+    api_call=url)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 199, in _request
+    retry_after=response.headers.get('X-Rate-Limit-Reset'))
+twython.exceptions.TwythonAuthError: Twitter API returned a 401 (Unauthorized), Could not authenticate you.
+2020-05-02 14:52:49,406: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-05-02 14:52:49,408: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-05-02 14:52:49,408: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-05-02 14:52:54,084: INFO: Ejecutando el crawler [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 62]
+2020-05-02 14:52:54,084: INFO: Ejecutando el crawler [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 62]
+2020-05-02 14:53:03,211: INFO: Calculando la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 67]
+2020-05-02 14:53:03,211: INFO: Calculando la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 67]
+2020-05-02 14:53:03,705: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 73]
+2020-05-02 14:53:03,705: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 73]

@@ -1,0 +1,132 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }}{% endif %}
+{% endblock %}
+
+{% block navbar %}
+    <nav class = "navbar navbar-default">
+        <div class = "container">
+            <div class = "navbar-header">
+                <a href="{{ url_for('main.index') }}" class = "navbar-brand" > <S A> </a>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    {% block app_content %}
+    {% endblock %}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src='static/Chart.min.js'></script>
+  
+  <script src="https://www.chartjs.org/dist/2.7.1/Chart.bundle.js"></script>
+
+  <script src="https://www.chartjs.org/samples/latest/utils.js"></script>   
+
+  <script>
+    Chart.defaults.global.defaultFontFamily = "Lato";
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = 'black';            
+    
+    // Get context
+    //var ctx = document.getElementById("myChart").getContext('2d');
+    //var ctx = document.getElementById("myChart");
+    var ctx = "myChart";
+
+    var myChart = new Chart(ctx, {
+        //type: 'horizontalBar',
+        type: 'bar',
+        data: {
+            labels: [
+                {% for item in keysL %}
+                    "{{item}}",
+                {% endfor %}
+            ],
+
+            datasets: [
+                {
+                    label: "Positive",
+                    fillColor: "green",
+                    strokeColor: "rgba(220,220,220,0.8)",
+                    highlightFill: "rgba(220,220,220,0.75)",
+                    highlightStroke: "rgba(220,220,220,1)",
+                    data: [
+                        {% for item in positiveL %}
+                            "{{item}}",
+                        {% endfor %}
+                    ],
+                    backgroundColor: [
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    ],
+                },
+
+                {
+                    label: "Negative",
+                    fillColor: "rgba(151,187,205,0.5)",
+                    strokeColor: "rgba(151,187,205,0.8)",
+                    highlightFill: "rgba(151,187,205,0.75)",
+                    highlightStroke: "rgba(151,187,205,1)",
+                    data: [
+                        {% for item in negativeL %}
+                            "{{item}}",
+                        {% endfor %}
+                    ],
+                    backgroundColor: [
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                    ]
+                }
+            ]
+        },
+
+        options: {
+            title: {
+                display: true,
+                text: 'Sentiment Analysis'
+            }
+        }
+    });
+    </script>
+
+{% endblock %}

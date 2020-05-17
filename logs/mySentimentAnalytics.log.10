@@ -1,0 +1,17 @@
+2018-11-25 18:42:39,266: ERROR: Exception on / [GET] [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py : 1761]
+Traceback (most recent call last):
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/main/routes.py", line 22, in index
+    return render_template('index.html', title = 'mySentimentAnalytics', form = form, positiveL=positiveL)
+UnboundLocalError: local variable 'positiveL' referenced before assignment

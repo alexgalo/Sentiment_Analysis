@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <div class = "col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <canvas id= "myChart" width= "100%"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class = "col-md-4">
+        <div class="page-header">
+            <h1>Sentiment Analysis <small>Polarizamos el trending topic mexicano !</small></h1>
+            <form action="" class="form form-horizontal" role="form" method="POST">
+                {{ form.hidden_tag() }}
+                {{ form.submit(class_ = 'btn btn-primary btn-lg')}}
+            </form>
+        </div>
+    </div>
+{% endblock %}
