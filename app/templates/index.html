@@ -1,22 +1,241 @@
-{% extends "base.html" %}
-{% import 'bootstrap/wtf.html' as wtf %}
 
-{% block app_content %}
-    <div class = "col-md-8">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <canvas id= "myChart" width= "100%"></canvas>
-            </div>
-        </div>
-    </div>
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sentiment Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<nonscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"></nonscript>
+		<!--<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>-->
+	</head>
+	<body class="is-preload">
 
-    <div class = "col-md-4">
-        <div class="page-header">
-            <h1>Sentiment Analysis <small>Polarizamos el trending topic mexicano !</small></h1>
-            <form action="" class="form form-horizontal" role="form" method="POST">
-                {{ form.hidden_tag() }}
-                {{ form.submit(class_ = 'btn btn-primary btn-lg')}}
-            </form>
-        </div>
-    </div>
-{% endblock %}
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src= "{{ url_for('static', filename='images/logo.svg') }}" alt="" /></span>
+						<h1>Sentiment Analysis</h1>
+						<p>Polaridad del trending topic mexicano.<br />
+						built by <a href="https://twitter.com/_alexgalo">@_alexgalo</a></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introducción</a></li>
+							<li><a href="#first">Gráfico</a></li>
+							<li><a href="#cta">Acerca de</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Sentiment Analysis</h2>
+										</header>
+										<p>Las técnicas de análisis de texto y sentimiento permiten a las organizaciones acercarse a la emoción verdadera que reside detrás de cada actualización de estado, de cada publicación o de cada tuit que lanzan sus clientes. </p> <br>
+										<p><strong>Sentiment Analysis</strong> recopila el top 5 del trending topic mexicano, analiza el texto de sus tuits y obtiene la polaridad para cada tema.</p>
+										
+										<!--<ul class="actions">
+											<li><a href="generic.html" class="button">Iniciar</a></li>
+										</ul>-->
+
+									</div>
+									<!--<span class="image"><img src="images/pic01.jpg" alt="" /></span>-->
+
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>Polaridad</h2>
+								</header>
+
+									{% block grafica %}
+										<div class = "col-md-8">
+											<div class="panel panel-default">
+												<div class="panel-body">
+													<canvas id= "myChart" width= "100%"></canvas>
+												</div>
+											</div>
+										</div>
+									{% endblock %}
+
+								<footer class="major">
+									<ul class="actions special">
+									
+										{% block formulario %}
+										<div class = "col-md-4">
+											<div class="page-header">
+												
+												<form action="" class="form form-horizontal" role="form" method="POST">
+													{{ form.hidden_tag() }}
+													{{ form.submit(class_ = 'btn btn-primary btn-lg')}}
+												</form>
+											</div>
+										</div>
+									{% endblock %}
+									</ul>
+								</footer>
+
+							</section>
+
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2><strong>Lysergic Ink</strong></h2>
+									<p>Creadores de contenido digital.<br/>
+									Escribimos el mundo con una <b>tinta atípica</b>.</p>
+								</header>
+
+								<!--<footer class="major">
+									<ul class="actions special">
+										<li><a href="generic.html" class="button primary">Get Started</a></li>
+										<li><a href="generic.html" class="button">Learn More</a></li>
+									</ul>
+								</footer>-->
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Lenguaje & Razonamiento</h2>
+							<p>Un grupo de investigación miembro de la UAM Cuajimalpa.</p>
+							<ul class="actions">
+								<li><a href="http://lyr.cua.uam.mx/" class="button">Sitio</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2>Contacto</h2>
+							<dl class="alt">
+								<dt>Name</dt>
+								<dd>Díaz Ávalos Alejandro &bull; UAM &bull; Cuajimalpa</dd>
+								<dt>Email</dt>
+								<dd><a href="#">diaz.student01@gmail.com</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Lysergic Ink.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src= "{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='js/browser.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src= "{{ url_for('static', filename='js/main.js') }}"></script>
+			<script src='static/Chart.min.js'></script>
+  
+			<script src="https://www.chartjs.org/dist/2.7.1/Chart.bundle.js"></script>
+		  
+			<script src="https://www.chartjs.org/samples/latest/utils.js"></script>   
+		  
+			<script>
+			  Chart.defaults.global.defaultFontFamily = "Lato";
+			  Chart.defaults.global.defaultFontSize = 12;
+			  Chart.defaults.global.defaultFontColor = 'black';            
+			  
+			  // Get context
+			  //var ctx = document.getElementById("myChart").getContext('2d');
+			  //var ctx = document.getElementById("myChart");
+			  
+			  var Data= {
+				  labels: [
+					  {% for item in keysL %}
+								  "{{item}}",
+					  {% endfor %}
+				  ],
+				  datasets: [
+					  {
+						  label: "Positivo",
+						  fillColor: "#4AF535",
+						  strokeColor: "#FFC145", 
+						  pointColor: "#fff",
+						  pointStrokeColor: "#457EFF",
+						  data: [
+								  {% for item in positiveL %}
+									  "{{item}}",
+								  {% endfor %}
+						  ],
+						  backgroundColor: [
+							  "#4AF535",
+							  "#4AF535",
+							  "#4AF535",
+							  "#4AF535",
+							  "#4AF535"
+						  ],
+		  
+					  },
+					  {
+						  label: "Negativo",
+						  fillColor: "#EB274F",
+						  strokeColor: "#CC19D4", 
+						  pointColor: "#fff",
+						  pointStrokeColor: "#7F11F6",
+						  data: [
+								  {% for item in negativeL %}
+									  "{{item}}",
+								  {% endfor %}
+						  ],
+						  
+						  backgroundColor: [
+							  "#EB274F",
+							  "#EB274F",
+							  "#EB274F",
+							  "#EB274F",
+							  "#EB274F"
+						  ],                
+					  }
+				  ],
+		  
+		  
+			  };
+		  
+			  var myChart= document.getElementById("myChart").getContext('2d');
+		  
+			  new Chart(myChart,{
+				  type: 'bar',
+				  data: Data
+			  } );
+		  
+			  var options= {
+				  title: {
+						  
+						  text: 'Sentiment Analysis'
+					  }
+			  }
+			  
+			  
+			  </script>
+
+	</body>
+</html>
+
+

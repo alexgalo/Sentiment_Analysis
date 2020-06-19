@@ -1,0 +1,20 @@
+{% extends 'bootstrap/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    {% block content %}
+    {{ super() }}
+
+        {% block formulario %}{% endblock %}
+        {% block grafica %}{% endblock %}
+        {% block scripts %}{% endblock %}
+
+
+    {% endblock %}
+    
+</body>
+</html>

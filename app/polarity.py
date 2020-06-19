@@ -143,6 +143,7 @@ class polarity:
 		self.sentimentDict = self.loadSentDictionary(self.sentWordsFile)
 		self.jsonObject = self.loadJsonFile(self.jsonFile)
 		self.stopWords = self.loadStopWords(self.stopWordsFile)
+
 		#iterates the hashtags inside the json file
 		for key in self.jsonObject:
 			#print('====== {} ======'.format(key))
@@ -162,4 +163,5 @@ class polarity:
 			(polarityP, polarityN) = self.calculatePolarity(hashtagVocabulary)
 			#print('positive: {}    negative: {}'.format(polarityP, polarityN))
 			self.polarityDict[key] = {"positivePolarity": polarityP, "negativePolarity": polarityN}
+
 		return self.polarityDict

@@ -1,5 +1,84 @@
-2018-11-26 11:06:53,400: INFO: Calculando la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 68]
-2018-11-26 11:06:53,904: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 74]
-2018-11-26 11:06:53,909: INFO: Ejecutando el crawler [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 62]
-2018-11-26 11:06:56,535: INFO: Calculando la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 68]
-2018-11-26 11:06:57,065: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 74]
+2020-06-17 16:47:58,915: ERROR: Exception on / [GET] [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py : 1761]
+Traceback (most recent call last):
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/main/routes.py", line 36, in index
+    return render_template('index.html', title = 'Sentiment Analytics', form = form, keysL=keysL, positiveL=positiveL, negativeL=negativeL)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/templates/base.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/templates/base.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/templates/base.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  [Previous line repeated 953 more times]
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/utils.py", line 351, in get
+    return self[key]
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/utils.py", line 400, in __getitem__
+    rv = self._mapping[key]
+RecursionError: maximum recursion depth exceeded in comparison
+2020-06-17 16:48:00,169: ERROR: Exception on / [GET] [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py : 1761]
+Traceback (most recent call last):
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/main/routes.py", line 36, in index
+    return render_template('index.html', title = 'Sentiment Analytics', form = form, keysL=keysL, positiveL=positiveL, negativeL=negativeL)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/templates/base.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/templates/base.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/templates/base.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  [Previous line repeated 953 more times]
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/utils.py", line 351, in get
+    return self[key]
+  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/jinja2/utils.py", line 400, in __getitem__
+    rv = self._mapping[key]
+RecursionError: maximum recursion depth exceeded in comparison

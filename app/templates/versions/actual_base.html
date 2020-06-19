@@ -1,0 +1,26 @@
+{% extends 'bootstrap/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% if title %}
+    <title>{{ title }} - Analyzer</title>
+    {% else %}
+    <title>Welcome to my analyzer</title>
+    {% endif %}   
+</head>
+<body>
+    {% block content %}
+    {{ super() }}
+
+    <div>
+        {% block formulario %}{% endblock %}
+        {% block grafica %}{% endblock %}
+    </div>
+
+    {% endblock %}
+</body>
+</html>

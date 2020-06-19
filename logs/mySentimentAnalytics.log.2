@@ -1,93 +1,75 @@
-2020-05-16 22:06:12,816: INFO: Calculando la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 117]
-2020-05-16 22:06:13,514: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 130]
-2020-05-16 22:06:16,406: INFO: Obteniendo el ultimo json [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 96]
-2020-05-16 22:06:16,407: INFO: Calculando la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 117]
-2020-05-16 22:06:17,070: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 130]
-2020-05-16 22:06:17,073: INFO: Obteniendo el ultimo json [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 96]
-2020-05-16 22:06:17,074: INFO: Calculando la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 117]
-2020-05-16 22:06:17,724: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 130]
-2020-05-16 22:09:28,834: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
-2020-05-16 22:09:28,836: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
-2020-05-16 22:09:28,836: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
-2020-05-16 22:09:32,220: INFO: Obteniendo el ultimo json [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 96]
-2020-05-16 22:09:32,220: INFO: Obteniendo el ultimo json [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 96]
-2020-05-16 22:09:32,222: INFO: Calculando la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 117]
-2020-05-16 22:09:32,222: INFO: Calculando la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 117]
-2020-05-16 22:09:32,959: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 130]
-2020-05-16 22:09:32,959: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 130]
-2020-05-16 22:13:14,675: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
-2020-05-16 22:13:14,677: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
-2020-05-16 22:13:14,677: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
-2020-05-16 22:13:17,602: INFO: Obteniendo el ultimo json [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 96]
-2020-05-16 22:13:17,602: INFO: Obteniendo el ultimo json [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 96]
-2020-05-16 22:13:17,603: INFO: Ejecutando el crawler [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 111]
-2020-05-16 22:13:17,603: INFO: Ejecutando el crawler [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 111]
-2020-05-16 22:13:18,115: ERROR: Exception on / [GET] [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py : 1761]
-Traceback (most recent call last):
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/main/routes.py", line 21, in index
-    (keysL, positiveL, negativeL) = pipelineAnalytics()
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py", line 114, in pipelineAnalytics
-    dataCrawler = crawler.pipeline()            #metodo pipeline genera un json con los tweets
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/crawler.py", line 116, in pipeline
-    mexico_locations = self.get_mexico_locations()
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/crawler.py", line 25, in get_mexico_locations
-    locations = self.t.get_available_trends()
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/endpoints.py", line 1082, in get_available_trends
-    return self.get('trends/available', params=params)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 270, in get
-    return self.request(endpoint, params=params, version=version)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 264, in request
-    api_call=url)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 199, in _request
-    retry_after=response.headers.get('X-Rate-Limit-Reset'))
-twython.exceptions.TwythonAuthError: Twitter API returned a 401 (Unauthorized), Could not authenticate you.
-2020-05-16 22:13:18,115: ERROR: Exception on / [GET] [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py : 1761]
-Traceback (most recent call last):
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/main/routes.py", line 21, in index
-    (keysL, positiveL, negativeL) = pipelineAnalytics()
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py", line 114, in pipelineAnalytics
-    dataCrawler = crawler.pipeline()            #metodo pipeline genera un json con los tweets
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/crawler.py", line 116, in pipeline
-    mexico_locations = self.get_mexico_locations()
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/app/crawler.py", line 25, in get_mexico_locations
-    locations = self.t.get_available_trends()
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/endpoints.py", line 1082, in get_available_trends
-    return self.get('trends/available', params=params)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 270, in get
-    return self.request(endpoint, params=params, version=version)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 264, in request
-    api_call=url)
-  File "/home/g3ek-ar/Escritorio/mySentimentAnalytics/environment/lib/python3.6/site-packages/twython/api.py", line 199, in _request
-    retry_after=response.headers.get('X-Rate-Limit-Reset'))
-twython.exceptions.TwythonAuthError: Twitter API returned a 401 (Unauthorized), Could not authenticate you.
-2020-05-16 22:13:45,074: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
-2020-05-16 22:13:45,077: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
-2020-05-16 22:13:45,077: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
-2020-05-16 22:13:47,850: INFO: Obteniendo el ultimo json [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 96]
-2020-05-16 22:13:47,850: INFO: Obteniendo el ultimo json [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 96]
-2020-05-16 22:13:47,851: INFO: Ejecutando el crawler [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 111]
-2020-05-16 22:13:47,851: INFO: Ejecutando el crawler [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 111]
+2020-06-17 17:22:47,795: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 115]
+2020-06-17 17:31:50,890: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:31:50,891: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:31:50,891: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:38:12,247: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:38:12,250: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:38:12,250: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:39:21,266: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:39:21,268: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:39:21,268: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:41:09,971: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:41:09,973: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:41:09,973: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 17:41:30,636: INFO: Iniciando Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 98]
+2020-06-17 17:41:30,636: INFO: Iniciando Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 98]
+2020-06-17 17:41:30,637: INFO: Iniciando Crawler en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 101]
+2020-06-17 17:41:30,637: INFO: Iniciando Crawler en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 101]
+2020-06-17 17:41:32,845: INFO: Iniciando Polarity en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 105]
+2020-06-17 17:41:32,845: INFO: Iniciando Polarity en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 105]
+2020-06-17 17:41:32,846: INFO: Recuperando recursos [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 109]
+2020-06-17 17:41:32,846: INFO: Recuperando recursos [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 109]
+2020-06-17 17:41:32,847: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 115]
+2020-06-17 17:41:32,847: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 115]
+2020-06-17 20:53:30,318: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:53:30,319: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:53:30,319: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:55:03,395: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:55:03,398: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:55:03,398: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:55:42,231: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:55:42,233: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:55:42,233: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:56:22,633: INFO: Iniciando Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 98]
+2020-06-17 20:56:22,633: INFO: Iniciando Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 98]
+2020-06-17 20:56:22,634: INFO: Iniciando Crawler en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 101]
+2020-06-17 20:56:22,634: INFO: Iniciando Crawler en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 101]
+2020-06-17 20:56:24,898: INFO: Iniciando Polarity en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 105]
+2020-06-17 20:56:24,898: INFO: Iniciando Polarity en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 105]
+2020-06-17 20:56:24,898: INFO: Recuperando recursos [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 109]
+2020-06-17 20:56:24,898: INFO: Recuperando recursos [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 109]
+2020-06-17 20:56:24,899: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 115]
+2020-06-17 20:56:24,899: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 115]
+2020-06-17 20:58:31,558: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:58:31,560: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:58:31,560: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-17 20:59:24,992: INFO: Iniciando Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 98]
+2020-06-17 20:59:24,992: INFO: Iniciando Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 98]
+2020-06-17 20:59:24,993: INFO: Iniciando Crawler en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 101]
+2020-06-17 20:59:24,993: INFO: Iniciando Crawler en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 101]
+2020-06-17 20:59:27,023: INFO: Iniciando Polarity en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 105]
+2020-06-17 20:59:27,023: INFO: Iniciando Polarity en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 105]
+2020-06-17 20:59:27,024: INFO: Recuperando recursos [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 109]
+2020-06-17 20:59:27,024: INFO: Recuperando recursos [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 109]
+2020-06-17 20:59:27,025: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 115]
+2020-06-17 20:59:27,025: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 115]
+2020-06-17 21:03:18,304: INFO: Iniciando Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 98]
+2020-06-17 21:03:18,304: INFO: Iniciando Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 98]
+2020-06-17 21:03:18,305: INFO: Iniciando Crawler en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 101]
+2020-06-17 21:03:18,305: INFO: Iniciando Crawler en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 101]
+2020-06-17 21:03:20,424: INFO: Iniciando Polarity en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 105]
+2020-06-17 21:03:20,424: INFO: Iniciando Polarity en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 105]
+2020-06-17 21:03:20,425: INFO: Recuperando recursos [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 109]
+2020-06-17 21:03:20,425: INFO: Recuperando recursos [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 109]
+2020-06-17 21:03:20,426: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 115]
+2020-06-17 21:03:20,426: INFO: Obteniendo la polaridad [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 115]
+2020-06-18 19:50:20,488: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-18 19:50:20,520: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-18 19:50:20,520: INFO: mySentimentAnalytics ha iniciado con exito! [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/__init__.py : 33]
+2020-06-18 19:51:26,745: INFO: Iniciando Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 98]
+2020-06-18 19:51:26,745: INFO: Iniciando Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 98]
+2020-06-18 19:51:26,746: INFO: Iniciando Crawler en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 101]
+2020-06-18 19:51:26,746: INFO: Iniciando Crawler en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 101]
+2020-06-18 19:51:29,163: INFO: Iniciando Polarity en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 105]
+2020-06-18 19:51:29,163: INFO: Iniciando Polarity en Analytics [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 105]
+2020-06-18 19:51:29,163: INFO: Recuperando recursos [in /home/g3ek-ar/Escritorio/mySentimentAnalytics/app/analytics.py : 109]

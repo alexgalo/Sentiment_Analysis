@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block formulario %}
+    <div class = "col-md-4">
+        <div class="page-header">
+            <h1>Sentiment Analysis <small>Trending topic en México</small></h1>
+            <form action="" class="form form-horizontal" role="form" method="POST">
+                {{ form.hidden_tag() }}
+                {{ form.submit(class_ = 'btn btn-primary btn-lg')}}
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block grafica %}
+    <div class = "col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <canvas id= "myChart" width= "100%"></canvas>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+{% block scripts %}
+  {{ super() }}
+  <script src='static/Chart.min.js'></script>
+  
+  <script src="https://www.chartjs.org/dist/2.7.1/Chart.bundle.js"></script>
+
+  <script src="https://www.chartjs.org/samples/latest/utils.js"></script>   
+
+  <script>
+    Chart.defaults.global.defaultFontFamily = "Lato";
+    Chart.defaults.global.defaultFontSize = 6;
+    Chart.defaults.global.defaultFontColor = 'black';            
+    
+    // Get context
+    //var ctx = document.getElementById("myChart").getContext('2d');
+    //var ctx = document.getElementById("myChart");
+    var ctx = "myChart";
+
+    var myChart = new Chart(ctx, {
+        //type: 'horizontalBar',
+        type: 'bar',
+        data: {
+            labels: [
+                {% for item in keysL %}
+                    "{{item}}",
+                {% endfor %}
+            ],
+
+            datasets: [
+                {
+                    label: "Positive",
+                    data: [
+                        {% for item in positiveL %}
+                            "{{item}}",
+                        {% endfor %}
+                    ],
+                    backgroundColor: [
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    'rgba(0, 255, 0, 0.3)',
+                    ],
+                },
+
+                {
+                    label: "Negative",
+                    data: [
+                        {% for item in negativeL %}
+                            "{{item}}",
+                        {% endfor %}
+                    ],
+                    backgroundColor: [
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                        'hsla(0, 100%, 50%, 0.3)',
+                    ]
+                }
+            ]
+        },
+
+        options: {
+            title: {
+                display: true,
+                text: 'Sentiment Analysis'
+            }
+        }
+    });
+    </script>
+
+{% endblock %}
